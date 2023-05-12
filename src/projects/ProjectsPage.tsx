@@ -56,7 +56,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <h1>Project</h1>
+      <h1>Projects</h1>
       {error && (
         <div className="row">
           <div className="card large error">

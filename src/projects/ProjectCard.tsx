@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Project } from "./Project";
 
 interface ProjectCardProps {
@@ -10,7 +11,9 @@ export default function ProjectCard(props: ProjectCardProps) {
 
   return (
     <div className="card">
-      <img src={project.imageUrl} alt={project.name} />
+      <Link to={'/projects/' + project.id}>
+        <img src={project.imageUrl} alt={project.name} />
+      </Link>
       <section className="section dark">
         <h5 className="strong">
           <strong>{project.name}</strong>

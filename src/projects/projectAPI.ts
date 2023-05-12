@@ -74,4 +74,13 @@ export const projectAPI = {
         throw new Error("Error updating project");
       });
   },
+  find(id: Number) {
+    return fetch(`${url}/${id}`)
+      .then(checkStatus)
+      .then(parseJSON)
+      .then(convertToProjectModel)
+      .catch((error: TypeError) => {
+        throw new Error("Project not found");
+      });
+  },
 };
